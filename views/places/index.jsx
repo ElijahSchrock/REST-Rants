@@ -25,6 +25,10 @@ function index (data) {
               <div className="row">
                 {placesFormatted}
               </div>
+              <div className="col text-center">
+                <a href="/places/new"><button>Add a new REST-Rant</button></a>
+                <a href="/"><button>Home Page</button></a>
+            </div>
           </main>
       </Default>
     )
