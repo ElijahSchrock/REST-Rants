@@ -13,13 +13,13 @@ function Default (html) {
             <nav>
                 <ul>
                     <li>
-                        <a href=''>Home</a>
+                        <a href='/'>Home</a>
                     </li>
                     <li>
-                        <a href=''>REST-Rants</a>
+                        <a href='/places'>REST-Rants</a>
                     </li>
                     <li>
-                        <a href=''>Add a REST-Rant</a>
+                        <a href='/places/new'>Add a REST-Rant</a>
                     </li>
                 </ul>
             </nav>
