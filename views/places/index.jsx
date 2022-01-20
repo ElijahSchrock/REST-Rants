@@ -2,21 +2,25 @@ const React = require('react');
 const Default = require('../default');
 
 function index (data) {
-    let placesFormatted = data.places.map((place) => {
-        return (
-          <div className="col-sm-6 text-center" key={index}>
-            <h2>{place.name}</h2>
-            <p className="text-center">
-              {place.cuisines}
-            </p>
-            <img src={place.pic} alt={place.name} />
-            <p className="text-center">
-              Located in {place.city}, {place.state}
-            </p>
-          </div>
-        )
-      })
+  let placesFormatted = data.places.map((place, index) => {
     return (
+      <div className="col-sm-6">
+        <h2>
+          <a href={`/places/${index}`} >
+            {place.name}
+          </a>
+        </h2>
+        <p className="text-center">
+          {place.cuisines}
+        </p>
+        <img src={place.pic} alt={place.name} />
+        <p className="text-center">
+          Located in {place.city}, {place.state}
+        </p>
+      </div>
+    )
+  })
+      return (
       <Default>
           <main>
               <div className='col text-center' key={index}>
@@ -27,7 +31,6 @@ function index (data) {
               </div>
               <div className="col text-center">
                 <a href="/places/new"><button>Add a new REST-Rant</button></a>
-                <a href="/"><button>Home Page</button></a>
             </div>
           </main>
       </Default>
