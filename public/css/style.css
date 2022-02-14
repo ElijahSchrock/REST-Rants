@@ -37,3 +37,12 @@ nav a:hover {
   color: pink;
   text-decoration: none;
 }
+
+.border {
+  position: relative;
+  text-align: center;
+}
+
+.row {
+  margin: 20px;
+}
