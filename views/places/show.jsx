@@ -9,7 +9,10 @@ function show (data) {
         <h1>
             {data.place.name}
         </h1>
-        <img src={data.place.pic} />
+        <img src={data.place.pic}/>
+        <p className="text-center">
+          Located in {data.place.city}, {data.place.state}
+        </p>
           </main>
         <h2>
           Rating:
@@ -18,9 +21,12 @@ function show (data) {
         <h2>
           Description:
         </h2>
-        <p className="text-center">
-          Located in {data.place.city}, {data.place.state} and Serving           {data.place.cuisines}
-        </p>
+        <h3>
+          {data.place.showEstablished()}
+        </h3>
+        <h4>
+          Serving {data.place.cuisines}
+        </h4>
         <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
           <button type="submit" className="btn btn-danger">
             Delete
