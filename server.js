@@ -15,12 +15,6 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'));
 
-//mongoose connect
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true, 
-    useUnifiedTopology: true
-  });
-
 //Controllers & Routes
 app.use('/places', require('./controllers/places'));
 
@@ -36,6 +30,3 @@ app.get('*', (req, res) => {
 app.listen(process.env.PORT, () => {
     console.log(`Awoken and landed on PORT ${process.env.PORT}`);
 })
-
-module.exports.Place = ('./places');
-module.exports.Comment = require('./comment');
