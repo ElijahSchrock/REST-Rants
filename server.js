@@ -5,12 +5,7 @@ const res = require('express/lib/response');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 
-const PORT = process.env.PORT;
 const app = express();
-mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true,
-    useUnifiedTopology: true}, () => {
-        console.log('connected to mongo: ', process.env.MONGO_URI)
-    })
 
 //Express Settings
 app.set('views', __dirname + '/views');
@@ -32,6 +27,6 @@ app.get('*', (req, res) => {
 })
 
 //Listen for PORT conenections
-app.listen(PORT, () => {
-    console.log('eating bread on PORT', PORT);
+app.listen(process.env.PORT, () => {
+    console.log(`Awoken and landed on PORT ${process.env.PORT}`);
 })
