@@ -102,4 +102,5 @@ router.delete('/:id/rant/:rantId', (req, res) => {
     res.send('GET /places/:id/rant/:rantId stub')
 })
 
+
 module.exports = router
