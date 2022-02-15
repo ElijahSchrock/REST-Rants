@@ -36,4 +36,5 @@ function index (data) {
       </Default>
     )
   }
+  
 module.exports = index

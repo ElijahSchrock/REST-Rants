@@ -20,13 +20,13 @@ app.use('/places', require('./controllers/places'));
 
 app.get('/', (req, res) => {
     res.render('home')
-})
+});
 
 app.get('*', (req, res) => {
     res.render('error404')
-})
+});
 
 //Listen for PORT conenections
 app.listen(process.env.PORT, () => {
     console.log(`Awoken and landed on PORT ${process.env.PORT}`);
-})
+});
